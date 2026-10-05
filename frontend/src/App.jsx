@@ -11,12 +11,12 @@ export default function App() {
   };
 
   return (
-    <div>
+    <main className="app-container">
       {!token ? (
         <Auth setToken={setToken} />
       ) : (
-        <Dashboard logout={handleLogout} />
+        <Dashboard token={token} logout={handleLogout} />
       )}
-    </div>
+    </main>
   );
 }
